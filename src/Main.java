@@ -57,7 +57,7 @@ public class Main {
 
         if (currentNumberOfPassengers < numberOfSeats) {
             System.out.println("Есть сидячие места");
-        } else if (currentNumberOfPassengers >= currentNumberOfPassengers && currentNumberOfPassengers
+        } else if (currentNumberOfPassengers >= numberOfSeats && currentNumberOfPassengers
                 < capacityOfOneTrainCarriage) {
             System.out.println("Остались стоячие места");
         } else if (currentNumberOfPassengers == capacityOfOneTrainCarriage) {
