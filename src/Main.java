@@ -28,9 +28,9 @@ public class Main {
 
         System.out.println("Задача 4:");
         int age2 = 15;
-        if (age2 > 2 && age2 < 6) {
+        if (age2 > 2 && age2 <= 6) {
             System.out.println("Если возраст человека равен " + age2 + ", то ему нужно ходить в детский сад");
-        } else if (age2 > 7 && age2 < 17) {
+        } else if (age2 >= 7 && age2 <= 17) {
             System.out.println("Если возраст человека равен " + age2 + ", то ему нужно ходить в школу.");
         } else if (age2 >= 18 && age2 <= 24) {
             System.out.println("Если возраст человека равен " + age2 + ", то его место в университете.");
@@ -51,31 +51,31 @@ public class Main {
         }
 
         System.out.println("Задание 6:");
-        int capacityOfOneTrainCarriage = 102;
-        int numberOfSeats = 60;
-        int numberOfStandingPlaces = 3;
-        int numberOfOccupiedPlaces = numberOfStandingPlaces + numberOfSeats;
+        int capacityOfOneTrainCarriage = 102; // вместимость одного вагона поезда
+        int numberOfSeats = 60; // сидячих мест в отдном вагоне
+        int currentNumberOfPassengers = 60; // текущее количество пассажиров
 
-        if (numberOfOccupiedPlaces == capacityOfOneTrainCarriage) {
-            System.out.println("Все места в поезде заняты");
-        } else if (numberOfSeats < 60) {
-            System.out.println("Есть свободные сидячие места");
-        } else if (numberOfStandingPlaces < (capacityOfOneTrainCarriage - numberOfSeats)) {
-            System.out.println("Есть свободные стоячие места");
-        } else {
-            System.out.println("Некорректно введеные данные");
+        if (currentNumberOfPassengers < numberOfSeats) {
+            System.out.println("Есть сидячие места");
+        } else if (currentNumberOfPassengers >= numberOfSeats && currentNumberOfPassengers
+                < capacityOfOneTrainCarriage) {
+            System.out.println("Остались стоячие места");
+        } else if (currentNumberOfPassengers == capacityOfOneTrainCarriage) {
+            System.out.println("Вагон полон");
         }
 
         System.out.println("Задача 7:");
-        int one = 9;
-        int two = 5;
-        int three = 3;
+        int one = 7;
+        int two = 9;
+        int three = 5;
         if (one > two && two > three) {
             System.out.println("Число один большее - " + one);
         } else if (two > one && two > three) {
             System.out.println("Число два большее - " + two);
         } else if (three > one && three > two) {
-            System.out.println(" Число три большее - " + three);
+            System.out.println("Число три большее - " + three);
+        } else if (one == two && two == three) {
+            System.out.println("Все три числа равны" + one + " " + two + " " + three);
         }
     }
 }
